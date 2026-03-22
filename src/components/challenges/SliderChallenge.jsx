@@ -3,6 +3,7 @@ import { useState } from "react";
 function SliderChallenge() {
   const [sliderValue, setSliderValue] = useState(0);
   const [displayValue, setDisplayValue] = useState(0);
+  const [message, setMessage] = useState("");
 
   const handleSliderChange = () => {
     setSliderValue((s) => s + 0.01);
@@ -13,6 +14,14 @@ function SliderChallenge() {
     setDisplayValue(e.target.value);
   };
 
+  const handleSubmit = () => {
+    if (Number(displayValue) === 67) {
+      setMessage("Accepted. Disturbingly human.");
+    } else {
+      setMessage("Rejected. Value must be exactly 67%.");
+    }
+  };
+
   return (
     <div>
       <h2>Set the value to exactly 67%</h2>
@@ -21,8 +30,14 @@ function SliderChallenge() {
         type="text"
         value={displayValue}
         onChange={handleInputChange}
-        style={{cursor: "default", textAlign: "center", background: "transparent", border: "none", outline: "none", fontSize: "17px"}}
-      /> %
+        style={{
+          background: "transparent",
+          border: "none",
+          outline: "none",
+          fontSize: "20px",
+          textAlign: "center",
+        }}
+      />%
 
       <input
         type="range"
@@ -32,7 +47,9 @@ function SliderChallenge() {
         onChange={handleSliderChange}
       />
 
-      <button>Submit</button>
+      <button onClick={handleSubmit}>Submit</button>
+
+      {message && <p>{message}</p>}
     </div>
   );
 }
