@@ -1,9 +1,11 @@
 import { useState } from "react";
+import SuccessModal from "../captcha/SuccessModal";
 
 function SliderChallenge() {
   const [sliderValue, setSliderValue] = useState(0);
   const [displayValue, setDisplayValue] = useState(0);
   const [message, setMessage] = useState("");
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleSliderChange = () => {
     setSliderValue((s) => s + 0.01);
@@ -16,9 +18,11 @@ function SliderChallenge() {
 
   const handleSubmit = () => {
     if (Number(displayValue) === 67) {
-      setMessage("Accepted. Disturbingly human.");
+      setMessage("");
+      setShowSuccess(true);
     } else {
       setMessage("Rejected. Value must be exactly 67%.");
+      setShowSuccess(false);
     }
   };
 
@@ -50,6 +54,8 @@ function SliderChallenge() {
       <button onClick={handleSubmit}>Submit</button>
 
       {message && <p>{message}</p>}
+
+      {showSuccess && <SuccessModal />}
     </div>
   );
 }
