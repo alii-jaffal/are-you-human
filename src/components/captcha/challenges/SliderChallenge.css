@@ -1,0 +1,124 @@
+.slider-challenge {
+  color: white;
+}
+
+.challenge-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.challenge-step,
+.challenge-type {
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.challenge-title {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.15;
+}
+
+.challenge-description {
+  margin: 10px 0 26px;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.slider-value-box {
+  width: fit-content;
+  margin: 0 auto 28px;
+  padding: 14px 18px;
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.slider-value-input {
+  width: 140px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #f8fafc;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.slider-percent {
+  font-size: 28px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.slider-range {
+  width: 100%;
+  appearance: none;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  outline: none;
+  margin-bottom: 24px;
+}
+
+.slider-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.45);
+}
+
+.slider-range::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  cursor: pointer;
+  border: none;
+}
+
+.slider-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.challenge-button {
+  border: none;
+  outline: none;
+  padding: 13px 28px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.challenge-button:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.challenge-message {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.challenge-message.error {
+  color: #fca5a5;
+}

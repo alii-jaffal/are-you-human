@@ -1,0 +1,30 @@
+.disappearing-challenge {
+  color: white;
+}
+
+.button-arena {
+  position: relative;
+  height: 220px;
+  margin-top: 24px;
+  border-radius: 20px;
+  border: 1px dashed rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.escape-button {
+  border: none;
+  outline: none;
+  padding: 14px 24px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #f59e0b, #ea580c);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.18s ease;
+  box-shadow: 0 10px 24px rgba(234, 88, 12, 0.3);
+}

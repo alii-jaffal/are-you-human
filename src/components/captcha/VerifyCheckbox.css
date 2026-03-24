@@ -1,0 +1,87 @@
+.verify-box {
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.verify-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.verify-input {
+  display: none;
+}
+
+.verify-custom-box {
+  width: 28px;
+  height: 28px;
+  border: 2px solid rgba(255, 255, 255, 0.65);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  position: relative;
+  transition: 0.2s ease;
+}
+
+.verify-input:checked + .verify-custom-box {
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  border-color: transparent;
+}
+
+.verify-input:checked + .verify-custom-box::after {
+  content: "✓";
+  position: absolute;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
+
+.verify-text {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+
+.verify-brand {
+  min-width: 150px;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+.verify-brand-logo {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 10px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  font-weight: 800;
+}
+
+.verify-brand-text p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.verify-brand-text span {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.62);
+}

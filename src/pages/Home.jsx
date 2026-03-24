@@ -1,15 +1,11 @@
-import CaptchaContainer from '../components/captcha/CaptchaContainer'
+import CaptchaContainer from "../components/captcha/CaptchaContainer";
 
-
-function Home(){
-
-    return (
-        <div style={{ textAlign: "center", marginTop: "100px" }}>
-            <h2>Advanced Human Verification</h2>
-            <CaptchaContainer />
-        </div>
-    );
+function Home() {
+  return (
+    <div className="home-page">
+      <CaptchaContainer />
+    </div>
+  );
 }
 
-    
-export default Home
+export default Home;
